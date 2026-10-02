@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sky Parkour</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <div class="hud">
+        <div class="stat">Moedas: <span id="coinCount">0</span></div>
+        <div class="stat">Pontuação: <span id="score">0</span></div>
+        <div class="stat">Vidas: <span id="lives">3</span></div>
+      </div>
+
+      <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+      <div id="overlay" class="overlay visible">
+        <div class="panel">
+          <h1>Sky Parkour</h1>
+          <p>Corra, pule e colete moedas para melhorar o bonequinho.</p>
+          <div class="upgrade-list">
+            <button class="upgrade-button" data-upgrade="jump">
+              Salto +1
+              <span id="jumpCost">Custo: 20</span>
+            </button>
+            <button class="upgrade-button" data-upgrade="speed">
+              Velocidade +1
+              <span id="speedCost">Custo: 25</span>
+            </button>
+          </div>
+          <button id="startButton" class="primary-button">Iniciar corrida</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
